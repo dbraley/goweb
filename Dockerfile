@@ -10,5 +10,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-w -s' -o 
 
 FROM scratch
 COPY --from=builder /go/src/github.com/dbraley/goweb/main /
-EXPOSE 8080
+ENV PORT 8080
+EXPOSE $PORT
 CMD ["/main"]

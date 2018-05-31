@@ -1,3 +1,0 @@
-# Quick and dirty, and faster build time than the two stage build (but also significantly larger image produced)
-FROM golang:onbuild
-EXPOSE 8080
